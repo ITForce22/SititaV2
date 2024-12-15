@@ -12,6 +12,24 @@ Website administrasi sekolah ini dibangun menggunakan **CodeIgniter 4** sebagai 
 - **Muhammad Afiq Ramadhan Oktaviyanto**
 - **Rayhan Muhammad Alfarizi**
 
+## Screenshot
+Berikut adalah beberapa tangkapan layar dari antarmuka website:
+
+![Home](Screenshot/Home.png)
+*Tampilan dashboard utama.*
+
+![Kerja Praktek](Screenshot/KerjaPraktek.png)
+*Tampilan halaman Kerja Praktek.*
+
+![Form Kerja Praktek](Screenshot/FormKerjaPraktek.png)
+*Tampilan halaman form untuk kerja praktek.*
+
+![Tugas Akhir](Screenshot/TugasAkhir.png)
+*Tampilan tampilan untuk tugas akhir.*
+
+![Usulan Konsentrasi](Screenshot/UsulanKonsen.png)
+*Tampilan untuk form mengajukan konsentrasi.*
+
 ## Fitur Utama
 - **Manajemen Data Mahasiswa**: CRUD (Create, Read, Update, Delete) untuk data mahasiswa.
 - **Manajemen Data Dosen**: CRUD untuk data dosen.
