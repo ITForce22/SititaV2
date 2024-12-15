@@ -4,14 +4,18 @@
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.0-blue?style=flat-square)
 
 ## Deskripsi Proyek
-Website administrasi sekolah ini dibangun menggunakan **CodeIgniter 4** sebagai backend framework dan **Tailwind CSS** untuk desain antarmuka. Tujuan utama proyek ini adalah menyediakan platform yang user-friendly untuk membantu administrasi sekolah mengelola data secara efisien, seperti data siswa, guru, jadwal, hingga laporan.
+Website administrasi sekolah ini dibangun menggunakan **CodeIgniter 4** sebagai backend framework dan **Tailwind CSS** untuk desain antarmuka. Tujuan utama proyek ini adalah menyediakan platform yang user-friendly untuk membantu administrasi sekolah mengelola data secara efisien, seperti data mahasiswa, dosen, jadwal, hingga laporan.
+
+## Project Member
+- **Rifqi Naufal**
+- **Muhammad Ridwan Slamat**
+- **Muhammad Afiq Ramadhan Oktaviyanto**
+- **Rayhan Muhammad Alfarizi**
 
 ## Fitur Utama
-- **Manajemen Data Siswa**: CRUD (Create, Read, Update, Delete) untuk data siswa.
-- **Manajemen Data Guru**: CRUD untuk data guru.
-- **Manajemen Jadwal**: Penjadwalan pelajaran secara dinamis.
+- **Manajemen Data Mahasiswa**: CRUD (Create, Read, Update, Delete) untuk data mahasiswa.
+- **Manajemen Data Dosen**: CRUD untuk data dosen.
 - **Laporan Akademik**: Pembuatan dan pengelolaan laporan akademik siswa.
-- **Autentikasi User**: Sistem login dan manajemen akses pengguna.
 - **Responsif**: Desain antarmuka yang responsif menggunakan Tailwind CSS.
 
 ## Teknologi yang Digunakan
@@ -97,27 +101,5 @@ project-root
 ├── package.json
 └── composer.json
 ```
-
-## Cara Kontribusi
-
-1. Fork repository ini.
-2. Buat branch baru untuk fitur atau perbaikan Anda:
-   ```bash
-   git checkout -b fitur-baru-atau-perbaikan
-   ```
-3. Commit perubahan Anda:
-   ```bash
-   git commit -m "Menambahkan fitur baru atau perbaikan"
-   ```
-4. Push branch ke GitHub:
-   ```bash
-   git push origin fitur-baru-atau-perbaikan
-   ```
-5. Buat pull request di repository utama.
-
-## Lisensi
-Proyek ini menggunakan lisensi [MIT License](LICENSE).
-
----
 
 **Catatan:** Pastikan untuk membaca dokumentasi resmi [CodeIgniter](https://codeigniter.com/docs) dan [Tailwind CSS](https://tailwindcss.com/docs) untuk memaksimalkan penggunaan framework ini.
