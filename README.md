@@ -1,68 +1,123 @@
-# CodeIgniter 4 Application Starter
+# School Administration Website
 
-## What is CodeIgniter?
+![CodeIgniter](https://img.shields.io/badge/CodeIgniter-4.4.0-red?style=flat-square)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.0-blue?style=flat-square)
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Deskripsi Proyek
+Website administrasi sekolah ini dibangun menggunakan **CodeIgniter 4** sebagai backend framework dan **Tailwind CSS** untuk desain antarmuka. Tujuan utama proyek ini adalah menyediakan platform yang user-friendly untuk membantu administrasi sekolah mengelola data secara efisien, seperti data siswa, guru, jadwal, hingga laporan.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Fitur Utama
+- **Manajemen Data Siswa**: CRUD (Create, Read, Update, Delete) untuk data siswa.
+- **Manajemen Data Guru**: CRUD untuk data guru.
+- **Manajemen Jadwal**: Penjadwalan pelajaran secara dinamis.
+- **Laporan Akademik**: Pembuatan dan pengelolaan laporan akademik siswa.
+- **Autentikasi User**: Sistem login dan manajemen akses pengguna.
+- **Responsif**: Desain antarmuka yang responsif menggunakan Tailwind CSS.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Teknologi yang Digunakan
+- **Backend**: [CodeIgniter 4](https://codeigniter.com/)
+- **Frontend**: [Tailwind CSS](https://tailwindcss.com/)
+- **Database**: MySQL/MariaDB
+- **Tooling**:
+  - Composer (untuk dependency PHP)
+  - NPM (untuk manajemen paket frontend)
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+## Persyaratan Sistem
+- PHP versi 7.4 atau lebih baru.
+- MySQL/MariaDB untuk basis data.
+- Composer (untuk mengelola dependensi PHP).
+- Node.js dan NPM (untuk mengelola Tailwind CSS).
 
-## Installation & updates
+## Instalasi
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+1. Clone repository ini ke local machine:
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+   ```bash
+   git clone https://github.com/username/school-admin.git
+   cd school-admin
+   ```
 
-## Setup
+2. Instal dependensi backend menggunakan Composer:
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+   ```bash
+   composer install
+   ```
 
-## Important Change with index.php
+3. Instal dependensi frontend menggunakan NPM:
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+   ```bash
+   npm install
+   ```
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+4. Konfigurasi file `.env` untuk mengatur database dan pengaturan lainnya:
 
-**Please** read the user guide for a better explanation of how CI4 works!
+   ```plaintext
+   database.default.hostname = localhost
+   database.default.database = nama_database
+   database.default.username = nama_user
+   database.default.password = password
+   database.default.DBDriver = MySQLi
+   ```
 
-## Repository Management
+5. Jalankan migrasi untuk membuat tabel di database:
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+   ```bash
+   php spark migrate
+   ```
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+6. Jalankan proses build Tailwind CSS (development mode):
 
-## Server Requirements
+   ```bash
+   npm run dev
+   ```
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+7. Jalankan server CodeIgniter:
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+   ```bash
+   php spark serve
+   ```
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+8. Akses website melalui browser di [http://localhost:8080](http://localhost:8080).
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+## Struktur Proyek
+```
+project-root
+├── app
+│   ├── Config
+│   ├── Controllers
+│   ├── Models
+│   └── Views
+├── public
+│   ├── assets
+│   ├── css
+│   └── js
+├── writable
+├── .env
+├── tailwind.config.js
+├── package.json
+└── composer.json
+```
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+## Cara Kontribusi
+
+1. Fork repository ini.
+2. Buat branch baru untuk fitur atau perbaikan Anda:
+   ```bash
+   git checkout -b fitur-baru-atau-perbaikan
+   ```
+3. Commit perubahan Anda:
+   ```bash
+   git commit -m "Menambahkan fitur baru atau perbaikan"
+   ```
+4. Push branch ke GitHub:
+   ```bash
+   git push origin fitur-baru-atau-perbaikan
+   ```
+5. Buat pull request di repository utama.
+
+## Lisensi
+Proyek ini menggunakan lisensi [MIT License](LICENSE).
+
+---
+
+**Catatan:** Pastikan untuk membaca dokumentasi resmi [CodeIgniter](https://codeigniter.com/docs) dan [Tailwind CSS](https://tailwindcss.com/docs) untuk memaksimalkan penggunaan framework ini.
